@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="fullPage">
+        <div class="header">
+            <img src="assets\03.jpg" alt="we are hiring" height="200px" width="100%">
+        </div>
+        <div class="container">
+            <div class="searchBar">
+            <input type="search" class="form-control"name="job_title" [(ngModel)]="job_title"
+            (ngModelChange)="search()" placeholder="search by job Title">
+            <button type="button" class="btn btn-primary"(click)="onCreateJobPortal()">Create A Job</button>
+            <button type="button" class="btn btn-success"(click)="onAppliedJobPortal()">Applied Job</button>
+
+           </div>
+        </div>
+        <div class="jobList">
+            <div class="lastcontent">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Company Name</th>
+                                <th scope="col">Street</th>
+                                <th scope="col">City</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Email Id</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Job Code</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Job Title</th>
+                                <th scope="col">Last Date</th>
+                                <th scope="col">Created Date</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let joblist of joblists">
+                                <td class="hidden">{{joblist.id}}</td>
+                                <td>{{joblist.company_name}}</td>
+                                <td>{{joblist.street}}</td>
+                                <td>{{joblist.city}}</td>
+                                <td>{{joblist.state}}</td>
+                                <td>{{joblist.email_id}}</td>
+                                <td>{{joblist.phone_number}}</td>
+                                <td>{{joblist.job_code}}</td>
+                                <td>{{joblist.description}}</td>
+                                <td>{{joblist.job_title}}</td>
+                                <td>{{joblist.last_date}}</td>
+                                <td>{{joblist.created_date}}</td>
+                                <td><button type="submit" class="btn btn-success"(click)="jobapply_Portal()">Apply</button></td>
+<!-- <td><button class="btn btn-danger" name="{{joblist.job_code}}"><a
+                                        href="jobapplyportal?jobcode={{joblist.job_code}}">Apply</a></button></td> -->
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>

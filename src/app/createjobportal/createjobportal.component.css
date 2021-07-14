@@ -1,0 +1,22 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.form-group {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.header{
+    margin: 15px;
+    padding: 20px;
+    box-shadow: -4px 3px 10px 10px #909090;
+    background-color: yellowgreen;
+}
+.content{
+    margin: 50px;
+    padding: 20px;
+    box-shadow: -4px 3px 10px 10px #909090;
+}
+.btn {
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+}
